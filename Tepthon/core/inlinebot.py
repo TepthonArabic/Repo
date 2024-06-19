@@ -12,7 +12,6 @@ from telethon.events import CallbackQuery, InlineQuery
 from Tepthon import zedub, zedversion, StartTime
 from ..Config import Config
 from ..helpers.functions import rand_key, zedalive, check_data_base_heal_th, get_readable_time
-from ..helpers.functions.utube import download_button, get_yt_video_id, get_ytthumb, result_formatter, ytsearch_data
 from ..plugins import mention
 from ..sql_helper.globals import gvarstatus
 from . import CMD_INFO, GRP_INFO, PLG_INFO, check_owner
@@ -129,7 +128,7 @@ async def inline_handler(event):  # sourcery no-metrics
                 zchannel = controlpmch.replace("@", "")
                 buttons = [[Button.url("⌔ قنـاتـي ⌔", f"https://t.me/{zchannel}")]]
             else:
-                buttons = [[Button.url("تيبثـون", "https://t.me/Tepthon")]]
+                buttons = [[Button.url("Tepthon", "https://t.me/Tepthon")]]
             PM_PIC = gvarstatus("pmpermit_pic")
             if PM_PIC:
                 CAT = [x for x in PM_PIC.split()]
@@ -141,7 +140,7 @@ async def inline_handler(event):  # sourcery no-metrics
             if CAT_IMG and CAT_IMG.endswith((".jpg", ".jpeg", ".png")):
                 result = builder.photo(
                     CAT_IMG,
-                    # title="Alive Tep",
+                    # title="Alive",
                     text=query,
                     buttons=buttons,
                 )
