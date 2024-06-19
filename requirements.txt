@@ -68,7 +68,6 @@ ujson
 urlextract
 user_agent
 validators
-youtubesearchpython
 vcsi
 wand
 wget==3.2
