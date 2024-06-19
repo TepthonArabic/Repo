@@ -1,6 +1,6 @@
-FROM rryr7/thesource:slim-buster
+FROM TepthonArabic/Repo:slim-buster
 
-RUN git clone https://github.com/RRYR7/thesource.git /root/Tepthon
+RUN git clone https://github.com/TepthonArabic/Repo.git /root/Tepthon
 
 WORKDIR /root/Tepthon
 
